@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><a href="#" id="dashboard">Dashboard</a></li>
+                <li><a href="#" id="manage-students">Manage Students</a></li>
+                <li><a href="#" id="view-registrations">View Registrations</a></li>
+                <li><a href="#" id="settings">Settings</a></li>
+                <li><a href="index.html" id="logout">Logout</a></li>
+
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Welcome, Admin!</h1>
+                <p>Your control panel for managing the school system.</p>
+            </div>
+
+            <!-- Dashboard Overview -->
+            <div id="overview" class="section">
+                <h3>Dashboard Overview</h3>
+                <div class="stats">
+                    <div class="stat">
+                        <h4>Total Students</h4>
+                        <p>500</p>
+                    </div>
+                    <div class="stat">
+                        <h4>Total Registrations</h4>
+                        <p>120</p>
+                    </div>
+                    <div class="stat">
+                        <h4>Active Classes</h4>
+                        <p>10</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manage Students -->
+            <div id="manage-students-section" class="section" style="display: none;">
+                <h3>Manage Students</h3>
+                <button id="add-student">Add New Student</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No</th>
+                            <th>Class</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Student -->
+                        <tr>
+                            <td>John Doe</td>
+                            <td>25</td>
+                            <td>10th Grade</td>
+                            <td>(123) 456-7890</td>
+                            <td><button>Edit</button> <button>Delete</button></td>
+                        </tr>
+                        <!-- More students will go here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- View Registrations -->
+            <div id="view-registrations-section" class="section" style="display: none;">
+                <h3>New Student Registrations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Roll No</th>
+                            <th>Class</th>
+                            <th>Fee Slip</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Registration -->
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>30</td>
+                            <td>9th Grade</td>
+                            <td>#FS12345</td>
+                            <td>Pending</td>
+                            <td><button>Approve</button> <button>Reject</button></td>
+                        </tr>
+                        <!-- More registrations will go here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Settings Section -->
+            <div id="settings-section" class="section" style="display: none;">
+                <h3>Settings</h3>
+                <form>
+                    <label for="school-name">School Name</label>
+                    <input type="text" id="school-name" name="school-name" value="ABC School">
+                    <label for="admin-email">Admin Email</label>
+                    <input type="email" id="admin-email" name="admin-email" value="admin@school.com">
+                    <button type="submit">Save Settings</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

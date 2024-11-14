@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/styles1.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Student Dashboard</h2>
+        </div>
+        <ul>
+            <li><a href="#" id="overview"><i class="icon">&#x1F4D6;</i> Overview</a></li>
+            <li><a href="#" id="assignments"><i class="icon">&#x270D;</i> Assignments</a></li>
+            <li><a href="#" id="grades"><i class="icon">&#x1F4C8;</i> Grades</a></li>
+            <li><a href="#" id="schedule"><i class="icon">&#x1F4C5;</i> Schedule</a></li>
+            <li><a href="#" id="logout"><i class="icon">&#x274C;</i> Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="header">
+            <h2>Welcome, John Doe!</h2>
+            <p>Your personalized dashboard to manage assignments, grades, and more.</p>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <h3>Profile</h3>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Class:</strong> 10th Grade</p>
+            <p><strong>Roll Number:</strong> 25</p>
+            <p><strong>Attendance:</strong> 92%</p>
+        </div>
+
+        <!-- Dashboard Widgets -->
+        <div class="widgets">
+            <!-- Progress Overview Widget -->
+            <div class="widget progress-widget">
+                <h3>Progress Overview</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+                <p>Overall Performance: 75%</p>
+            </div>
+
+            <!-- Upcoming Assignments Widget -->
+            <div class="widget" id="widget-assignments">
+                <h3>Upcoming Assignments</h3>
+                <ul id="assignment-list">
+                    <li>Math Homework - Due: Nov 15</li>
+                    <li>Science Project - Due: Nov 18</li>
+                    <li>History Essay - Due: Nov 20</li>
+                </ul>
+            </div>
+
+            <!-- Recent Grades Widget -->
+            <div class="widget" id="widget-grades">
+                <h3>Recent Grades</h3>
+                <ul id="grades-list">
+                    <li>Math: 90/100</li>
+                    <li>Science: 85/100</li>
+                    <li>English: 88/100</li>
+                </ul>
+            </div>
+
+            <!-- Today's Schedule Widget -->
+            <div class="widget" id="widget-schedule">
+                <h3>Today's Schedule</h3>
+                <ul id="schedule-list">
+                    <li>09:00 AM - Math Class</li>
+                    <li>11:00 AM - Science Class</li>
+                    <li>01:00 PM - History Class</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script1.js"></script>
+</body>
+</html>

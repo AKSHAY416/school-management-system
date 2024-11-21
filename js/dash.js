@@ -1,17 +1,20 @@
-// Handle Leave Form Submission
-document.getElementById("leave-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    alert("Leave request submitted successfully!");
-  });
+document.addEventListener("DOMContentLoaded", () => {
+    const feesPendingCount = 2; // Example data
+    const labBooksPendingCount = 1; // Example data
+    const applicationsPendingCount = 0; // Example data
   
-  // Handle Lab Book Form Submission
-  document.getElementById("lab-book-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    const bookName = document.getElementById("book-name").value;
-    const history = document.getElementById("lab-books-history");
-    const listItem = document.createElement("li");
-    listItem.textContent = `${bookName} - Pending`;
-    history.appendChild(listItem);
-    alert("Lab book request submitted successfully!");
+    const feesBadge = document.getElementById("fees-pending-count");
+    const labBooksBadge = document.getElementById("lab-books-pending-count");
+    const applicationsBadge = document.getElementById("applications-pending-count");
+  
+    // Update badges dynamically
+    if (feesPendingCount > 0) feesBadge.textContent = feesPendingCount;
+    else feesBadge.classList.add("hidden");
+  
+    if (labBooksPendingCount > 0) labBooksBadge.textContent = labBooksPendingCount;
+    else labBooksBadge.classList.add("hidden");
+  
+    if (applicationsPendingCount > 0) applicationsBadge.textContent = applicationsPendingCount;
+    else applicationsBadge.classList.add("hidden");
   });
   

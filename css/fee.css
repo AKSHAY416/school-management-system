@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .navbar {
+    background-color: #007BFF;
+    padding: 1.2rem 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .navbar .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .fees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+  
+  .fees-table th, .fees-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .fees-table .fee-amount,
+  .fees-table .fee-date,
+  .fees-table .fee-status {
+    width: 100%;
+  }
+  
+  .fees-table .status.pending {
+    color: red;
+  }
+  
+  .fees-table .status.paid {
+    color: green;
+  }
+  
+  .btn-primary, .btn-secondary {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-fee {
+    margin-top: 2rem;
+  }
+  
+  .add-fee input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  .add-fee button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .add-fee button:hover {
+    background-color: #218838;
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  

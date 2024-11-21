@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees - Student Dashboard</title>
+  <link rel="stylesheet" href="css/fee.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Student Dashboard</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fees.html" class="active">Fees</a></li>
+          <li><a href="lab-books.html">Lab Books</a></li>
+          <li><a href="applications.html">Applications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Your School Fees</h2>
+      <p>Here is a summary of your current fee status. Please ensure to clear your dues before the due date to avoid penalties.</p>
+
+      <!-- Table of Existing Fees -->
+      <table class="fees-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="fee-table-body">
+          <!-- Existing Fee Row Example -->
+          <tr>
+            <td><input type="date" value="2024-10-01" class="fee-date"></td>
+            <td><input type="number" value="300" class="fee-amount"></td>
+            <td class="status pending">
+              <select class="fee-status">
+                <option value="pending" selected>Pending</option>
+                <option value="paid">Paid</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn-primary" onclick="payFee(this)">Pay Now</button>
+              <button class="btn-secondary" onclick="saveFee(this)">Save</button>
+            </td>
+          </tr>
+          <!-- Existing Paid Fee Row Example -->
+          <tr>
+            <td>2024-09-01</td>
+            <td>$250</td>
+            <td class="status paid">Paid</td>
+            <td><button class="btn-secondary" disabled>Paid</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Add New Fee Form -->
+      <section class="add-fee">
+        <h3>Add New Fee</h3>
+        <form id="add-fee-form">
+          <label for="new-fee-date">Fee Date:</label>
+          <input type="date" id="new-fee-date" required>
+          
+          <label for="new-fee-description">Fee Description:</label>
+          <input type="text" id="new-fee-description" placeholder="Enter Fee Description" required>
+
+          <label for="new-fee-amount">Amount:</label>
+          <input type="number" id="new-fee-amount" placeholder="Enter Amount" required>
+
+          <button type="submit" class="btn-primary">Add Fee</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <script src="js/fees.js"></script>
+</body>
+</html>

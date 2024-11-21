@@ -8,96 +8,50 @@
 </head>
 <body>
   <header class="navbar">
-    <h1>Student Dashboard</h1>
-    <nav>
-      <a href="#leave">Leave Requests</a>
-      <a href="#fees">Fees</a>
-      <a href="#lab-books">Lab Book Requests</a>
+  <div class="container">
+    <div class="navbar-brand">
+      <h1 class="logo">Student Dashboard</h1>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle Navigation">
+      <span class="menu-icon"></span>
+    </button>
+    <nav class="navbar-menu">
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Overview</a></li>
+        <li><a href="fee.html" class="nav-link">Fees</a></li>
+        <li><a href="lab-books.html" class="nav-link">Lab Books</a></li>
+        <li><a href="applications.html" class="nav-link">Applications</a></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
+
+  <main class="container">
     <!-- Dashboard Overview -->
     <section id="overview" class="section">
-      <h2>Welcome, [Student Name]</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Pending Fees</h3>
-          <p>$300</p>
+      <h2>Welcome, <span id="student-name">[Student Name]</span></h2>
+      <div class="box-container">
+        <!-- Clickable Boxes -->
+        <div class="clickable-box" onclick="window.location.href='fee.html'">
+          <h3>Fees</h3>
+          <p>Check your fee status.</p>
         </div>
-        <div class="card">
-          <h3>Leave Requests</h3>
-          <p>2 Pending</p>
+        <div class="clickable-box" onclick="window.location.href='lab-books.html'">
+          <h3>Lab Books</h3>
+          <p>Request and manage lab books.</p>
         </div>
-        <div class="card">
-          <h3>Lab Book Requests</h3>
-          <p>1 Approved</p>
+        <div class="clickable-box" onclick="window.location.href='applications.html'">
+          <h3>Applications</h3>
+          <p>View and manage your applications.</p>
         </div>
       </div>
     </section>
-
-    <!-- Leave Request -->
-    <section id="leave" class="section">
-      <h2>Leave Requests</h2>
-      <form id="leave-form">
-        <label for="date-from">From:</label>
-        <input type="date" id="date-from" required>
-        
-        <label for="date-to">To:</label>
-        <input type="date" id="date-to" required>
-        
-        <label for="reason">Reason:</label>
-        <textarea id="reason" rows="3" required></textarea>
-        
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <!-- Fees -->
-    <section id="fees" class="section">
-      <h2>Fees</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Amount</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="fees-table">
-          <tr>
-            <td>2024-10-01</td>
-            <td>$300</td>
-            <td>Pending</td>
-            <td><button class="pay-button">Pay Now</button></td>
-          </tr>
-          <tr>
-            <td>2024-09-01</td>
-            <td>$300</td>
-            <td>Paid</td>
-            <td>-</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Lab Book Requests -->
-    <section id="lab-books" class="section">
-      <h2>Lab Book Requests</h2>
-      <form id="lab-book-form">
-        <label for="book-name">Book Name:</label>
-        <input type="text" id="book-name" required>
-        
-        <button type="submit">Request Book</button>
-      </form>
-      <h3>Request History</h3>
-      <ul id="lab-books-history">
-        <li>Physics Lab Manual - Approved</li>
-        <li>Chemistry Lab Manual - Pending</li>
-      </ul>
-    </section>
   </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Student Dashboard. All rights reserved.</p>
+  </footer>
 
   <script src="js/dash.js"></script>
 </body>

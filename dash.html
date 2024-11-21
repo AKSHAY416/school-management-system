@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/dash.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>Student Dashboard</h1>
+    <nav>
+      <a href="#leave">Leave Requests</a>
+      <a href="#fees">Fees</a>
+      <a href="#lab-books">Lab Book Requests</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dashboard Overview -->
+    <section id="overview" class="section">
+      <h2>Welcome, [Student Name]</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Pending Fees</h3>
+          <p>$300</p>
+        </div>
+        <div class="card">
+          <h3>Leave Requests</h3>
+          <p>2 Pending</p>
+        </div>
+        <div class="card">
+          <h3>Lab Book Requests</h3>
+          <p>1 Approved</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leave Request -->
+    <section id="leave" class="section">
+      <h2>Leave Requests</h2>
+      <form id="leave-form">
+        <label for="date-from">From:</label>
+        <input type="date" id="date-from" required>
+        
+        <label for="date-to">To:</label>
+        <input type="date" id="date-to" required>
+        
+        <label for="reason">Reason:</label>
+        <textarea id="reason" rows="3" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Fees -->
+    <section id="fees" class="section">
+      <h2>Fees</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="fees-table">
+          <tr>
+            <td>2024-10-01</td>
+            <td>$300</td>
+            <td>Pending</td>
+            <td><button class="pay-button">Pay Now</button></td>
+          </tr>
+          <tr>
+            <td>2024-09-01</td>
+            <td>$300</td>
+            <td>Paid</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Lab Book Requests -->
+    <section id="lab-books" class="section">
+      <h2>Lab Book Requests</h2>
+      <form id="lab-book-form">
+        <label for="book-name">Book Name:</label>
+        <input type="text" id="book-name" required>
+        
+        <button type="submit">Request Book</button>
+      </form>
+      <h3>Request History</h3>
+      <ul id="lab-books-history">
+        <li>Physics Lab Manual - Approved</li>
+        <li>Chemistry Lab Manual - Pending</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/dash.js"></script>
+</body>
+</html>

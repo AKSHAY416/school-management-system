@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Management System</title>
+    <link rel="stylesheet" href="css/lab.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lab Management - Book Request</h1>
+        <form id="bookRequestForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
+
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" placeholder="Enter the book name" required>
+
+            <label for="usageDuration">Usage Duration:</label>
+            <select id="usageDuration" name="usageDuration" required>
+                <option value="" disabled selected>Select duration</option>
+                <option value="1 week">1 Week</option>
+                <option value="2 weeks">2 Weeks</option>
+                <option value="1 month">1 Month</option>
+                <option value="2 months">2 Months</option>
+            </select>
+
+            <label for="reason">Reason for Request:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Explain why you need the book" required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+        <div id="successMessage"></div>
+    </div>
+    <script src="js/lab.js"></script>
+</body>
+</html>
